@@ -1,0 +1,23 @@
+<li>
+    <div class='container-fluid'>
+
+      <div class='row question-row'>
+        <div class='col-sm-2 col-sm-offset-2 text-center'>
+          <%= link_to upvote_question_path(question), method: :put, remote: true do %>
+            <span class="glyphicon glyphicon-collapse-up" aria-hidden="true"></span>
+          <% end %>
+          <%= link_to downvote_question_path(question), method: :put, remote: true do %>
+            <span class="glyphicon glyphicon-collapse-down" aria-hidden="true"></span>
+          <% end %>
+        </div>
+        <div class='col-sm-1 text-left' id="<%= question.id %>">
+          <%= question.vote %>
+        </div>
+        <div class='col-sm-4 text-left'>
+          <%= link_to question_path(question) do %>
+            <h3 style='margin:0'><%= question.title %></h3>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </li>

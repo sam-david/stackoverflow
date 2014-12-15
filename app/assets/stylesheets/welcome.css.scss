@@ -1,0 +1,47 @@
+/*// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+html, body { height:100%; }
+
+.home {
+  background: url(http://i.imgur.com/BGLvOhE.jpg) center;
+  background-size:cover;
+  height:100%;
+  color:#fff;
+  background-color: transparent;
+}
+
+.markdown-output {
+  border: solid black 1px;
+  height: 100%;
+  padding: 25px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.markdown-output h1,h2,h3,h4,h5,h6,p {
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+
+
+.markdown-output li {
+  margin-top: 0px;
+}
+
+.markdown-output hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.code-text {
+  background-color: #f7f7f7;
+  font-family: monospace;
+  margin-bottom: 0px;
+  margin-top: 4px;
+}
+
+.numbered-list {
+  list-style-type: hebrew;
+}

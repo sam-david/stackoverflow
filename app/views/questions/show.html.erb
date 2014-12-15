@@ -1,0 +1,48 @@
+<div class='row'>
+  <%= link_to questions_path do %>
+    <button class='btn btn-default top-left'>Questions Home</button>
+  <% end %>
+</div>
+
+<div class='row'>
+  <div class='col-sm-12 text-center'>
+    <h3>Question: <%= @question.title %></h3>
+  </div>
+</div>
+
+<div class='container'>
+  <hr>
+  <div class='row'>
+    <div class='col-sm-2 col-sm-offset-2 text-center'>
+      <%= link_to upvote_question_path(@question), method: :put, remote: true do %>
+      <span class="glyphicon glyphicon-collapse-up" aria-hidden="true"></span>
+      <% end %>
+      <%= link_to downvote_question_path(@question), method: :put, remote: true do %>
+            <span class="glyphicon glyphicon-collapse-down" aria-hidden="true"></span>
+          <% end %>
+    </div>
+    <div class='col-sm-1 text-left' id="<%= @question.id %>">
+          <%= @question.vote %>
+    </div>
+    <div class='col-sm-5 markdown-question-output'><%= @question.content %></div>
+  </div>
+  <strong>Text:</strong>
+
+</p>
+<%= link_to "Edit", edit_question_path(@question) %> -
+<%= link_to 'Destroy', question_path(@question), method: :delete, data: { confirm: 'Are you sure?' } %>
+<hr>
+<h2>Answers</h2>
+<div class="answer-div">
+  <%= render @answers %>
+</div>
+<div class='row'>
+  <div class='col-sm-6'>
+    <h2>Answer to the question:</h2>
+    <%= render 'form_answers' %>
+  </div>
+  <div class='col-sm-6 markdown-answer-output'>
+  </div>
+</div>
+</div>
+

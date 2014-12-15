@@ -1,0 +1,16 @@
+<p>
+    <strong>Answer title:</strong>
+    <%= answer.title %>
+  </p>
+
+  <p>
+    <strong>Content: </strong>
+    <%= answer.content %>
+  </p>
+  <p>
+    <strong>Vote Count: </strong>
+    <span id="<%= answer.id %>">
+      <%= answer.vote %>
+    </span>
+  </p>
+  <%= link_to 'Upvote', [@question, answer, :upvote], method: :put, remote: true %> | <%= link_to 'Downvote', [@question, answer, :downvote], method: :put, remote: true %>

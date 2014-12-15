@@ -1,0 +1,15 @@
+<%= form_for :question, url: questions_path, :html => {:class => "form-horizontal question-form"}, remote: true do |f| %>
+  <p>Title</p>
+  <div class='form-group'>
+    <%= f.text_field :title %>
+  </div>
+
+  <p>Content</p>
+  <div>
+    <%= f.text_area :content, size: "70x10" %>
+  </div>
+
+  <div class='form-horizontal'>
+    <%= f.submit %>
+  </div>
+<% end %>

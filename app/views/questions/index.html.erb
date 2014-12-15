@@ -1,0 +1,36 @@
+<div class='jumbotron text-center'>
+  <h1>Questions</h1>
+    <%= link_to root_path do %>
+      <button class='btn btn-default top-left'>Home</button>
+    <% end %>
+</div>
+
+<div class='container'>
+  <div class='row text-center'>
+    <h3>Post a new question!</h3>
+  </div>
+  <div class='row'>
+    <div class='col-sm-6'>
+      <%= render 'form' %>
+    </div>
+
+      <div class='col-sm-5 markdown-output'>
+        Live Markdown Output
+      </div>
+  </div>
+  <div class='row'>
+    <h3>
+  </div>
+</div>
+
+<hr>
+<div class='row'>
+  <div class='col-sm-12 text-center'>
+    <h2 class='questions-header'>Previous Questions</h2>
+  </div>
+</div>
+<div class='container text-center'>
+<ul id ='question-list'>
+  <%= render @questions %>
+</ul>
+</div>

@@ -1,0 +1,13 @@
+<%= form_for([@question, @question.answers.build], :html => {:class => "answer-form"}, remote: true) do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %><br>
+    <%= f.text_area :content, size: "70x10" %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
